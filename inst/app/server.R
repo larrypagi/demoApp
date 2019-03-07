@@ -1,1 +1,1 @@
-shinyexample:::app_server
+demoApp:::app_server

@@ -8,7 +8,7 @@ app_ui <- function() {
     golem::favicon(),
     # List the first level UI elements here 
     fluidPage(
-      h1("shinyexample")
+      h1("demoApp")
     )
   )
 }
@@ -16,7 +16,7 @@ app_ui <- function() {
 golem_add_external_resources <- function(){
   
   addResourcePath(
-    'www', system.file('app/www', package = 'shinyexample')
+    'www', system.file('app/www', package = 'demoApp')
   )
  
   tagList(
