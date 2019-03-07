@@ -1,3 +1,14 @@
+Original app was from: https://github.com/rstudio/shiny-examples/tree/master/063-superzip-example
+
+
+It was reformatted as an R-package for demo use. 
+
+
+
+______
+From the original README
+
+
 # SuperZIP demo
 
 See a version of it live at http://shiny.rstudio.com/gallery/superzip-example.html
