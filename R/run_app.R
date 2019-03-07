@@ -1,7 +1,9 @@
-#' run the Shiny Application
+#' run_app
 #'
+#' @return NA
 #' @export
-#' @importFrom shiny runApp
+#'
+
 run_app <- function() {
-  shiny::runApp(system.file("app", package = "demoApp"))
+  shiny::shinyApp(ui = demoApp::app_ui(), server = demoApp::app_server)
 }

@@ -1,1 +1,1 @@
-demoApp:::app_ui()
+demoApp::app_ui()

@@ -1,1 +1,1 @@
-demoApp:::app_server
+demoApp::app_server
