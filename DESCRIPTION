@@ -1,11 +1,9 @@
 Package: demoApp
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "s",
-           family = "s",
-           role = c("aut", "cre"),
-           email = "first.lasts@example.com")
+Authors@R: c(
+    person("Joe", "Cheng", email = "joe@rstudio.com", role = "cre"),
+    person("Chase", "Clark", email = "chasec288@gmail.com", role = "aut"))
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
 Encoding: UTF-8
