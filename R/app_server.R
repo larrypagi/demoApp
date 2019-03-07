@@ -16,11 +16,35 @@ set.seed(100)
 app_server <- function(input, output, session) {
 
   ## Interactive Map ###########################################
-
+  allzips <- readRDS(base::url("https://github.com/rstudio/shiny-examples/blob/master/063-superzip-example/data/superzip.rds?raw=true"))
+  allzips$latitude <- jitter(allzips$latitude)
+  allzips$longitude <- jitter(allzips$longitude)
+  allzips$college <- allzips$college * 100
+  allzips$zipcode <- formatC(allzips$zipcode, width=5, format="d", flag="0")
+  row.names(allzips) <- allzips$zipcode
   
+  allzips %>%
+    dplyr::select(
+      City = city.x,
+      State = state.x,
+      Zipcode = zipcode,
+      Rank = rank,
+      Score = centile,
+      Superzip = superzip,
+      Population = adultpop,
+      College = college,
+      Income = income,
+      Lat = latitude,
+      Long = longitude
+    )
+  
+  zipdata <- allzips[sample.int(nrow(allzips), 10000),]
+  # By ordering by centile, we ensure that the (comparatively rare) SuperZIPs
+  # will be drawn last and thus be easier to see
+  zipdata <- zipdata[order(zipdata$centile),]
   
   # Create the map
-  output$map <- renderLeaflet({
+  output$map <- leaflet::renderLeaflet({
     leaflet::leaflet() %>%
       leaflet::addTiles(
         urlTemplate = "//{s}.tiles.mapbox.com/v3/jcheng.map-5ebohr46/{z}/{x}/{y}.png",

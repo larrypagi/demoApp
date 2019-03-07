@@ -19,11 +19,12 @@ navbarPage("Superzip", id="nav",
 
   tabPanel("Interactive map",
     div(class="outer",
-
+        tags$head(tags$link(href = "www/styles.css", rel = "stylesheet")),
+        
    
 
       # If not using custom CSS, set height of leafletOutput to a number instead of percent
-      leafletOutput("map", width="100%", height="100%"),
+      leaflet::leafletOutput("map", width="100%", height="100%"),
 
       # Shiny versions prior to 0.11 should use class = "modal" instead.
       absolutePanel(id = "controls", class = "panel panel-default", fixed = TRUE,
