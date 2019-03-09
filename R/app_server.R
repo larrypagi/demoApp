@@ -1,4 +1,4 @@
-importFrom(magrittr,"%>%")
+
 
 # Leaflet bindings are a bit slow; for now we'll just sample to compensate
 set.seed(100)
@@ -13,7 +13,7 @@ library("magrittr")
 #'
 #' @return shiny server
 #' @export
-#
+#' @importFrom(magrittr,"%>%")
 app_server <- function(input, output, session) {
 
   ## Interactive Map ###########################################
