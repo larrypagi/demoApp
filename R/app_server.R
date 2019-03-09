@@ -1,3 +1,4 @@
+importFrom(magrittr,"%>%")
 
 # Leaflet bindings are a bit slow; for now we'll just sample to compensate
 set.seed(100)

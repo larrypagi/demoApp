@@ -13,7 +13,8 @@ Imports:
     RColorBrewer,
     scales,
     lattice,
-    dplyr
+    dplyr,
+    DT
 Depends: 
     shiny,
     magrittr

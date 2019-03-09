@@ -1,3 +1,5 @@
+library(magrittr)
+
 #' main app ui
 #'
 #' @return shiny ui
