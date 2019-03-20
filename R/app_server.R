@@ -15,6 +15,7 @@ library("magrittr")
 #' @export
 #' @importFrom(magrittr,"%>%")
 app_server <- function(input, output, session) {
+library("magrittr")
 
   ## Interactive Map ###########################################
   allzips <- readRDS(base::url("https://github.com/rstudio/shiny-examples/blob/master/063-superzip-example/data/superzip.rds?raw=true"))
