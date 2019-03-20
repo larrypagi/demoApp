@@ -9,13 +9,6 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    leaflet,
-    RColorBrewer,
-    scales,
-    lattice,
-    dplyr,
-    DT
 Depends: 
-    shiny,
-    magrittr
+    shiny
 RoxygenNote: 6.1.1
