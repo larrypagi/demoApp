@@ -9,7 +9,6 @@
 #' @return shiny server
 #' @export
 app_server <- function(input, output, session) {
-library("magrittr")
 
     # Combine the selected variables into a new data frame
     selectedData <- reactive({
