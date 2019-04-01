@@ -61,15 +61,18 @@ artifacts:
   - path: 'My_App\dist\*.exe'
     name: app
 
-  - deploy:
-    release: myproduct-v$(appveyor_build_version)
-    description: 'Release description'
-    provider: GitHub
-    auth_token:
-      secure: 9coqsQQ6ps/LuUqQl5w4310gsoRQjSipzG8SezG8kzL8EHcauZMujw3ui6VlJKLb
-    artifact: 'My_App\dist\*.exe'
-    draft: false
-    prerelease: false
-    on:
-      branch: master                 
-      APPVEYOR_REPO_TAG: true       
+
+deploy:
+  release: myproduct-v$(appveyor_build_version)
+  description: 'Release description'
+  provider: GitHub
+  auth_token:
+    secure: '9coqsQQ6ps/LuUqQl5w4310gsoRQjSipzG8SezG8kzL8EHcauZMujw3ui6VlJKLb' # your encrypted token from GitHub
+  artifact: 'My_App\dist\*.exe'            # upload all NuGet packages to release assets
+  draft: false
+  prerelease: false
+  on:
+    branch: master                 # release from master branch only
+    APPVEYOR_REPO_TAG: true        # deploy on tag push only
+    
+    
