@@ -25,12 +25,6 @@ on_failure:
   - 7z a failure.zip *.Rcheck\*
   - appveyor PushArtifact failure.zip
   
-script:
-  - Rscript -e 'if(!"remotes" %in% rownames(installed.packages())) { install.packages("remotes", dependencies = TRUE) }'
-  - Rscript -e 'remotes::install_github("chasemc/electricShine")'
-  - Rscript -e 'electricShine::buildPackage(appName = "My_App",description = "My demo application",packageName = "demoApp",semanticVersion = "1.0.0",installTo = tempdir(),MRANdate = as.character(Sys.Date() - 3),functionName = "run_app",githubRepo = "chasemc/demoApp",localPath  = NULL,only64 = TRUE)'
-  
-  
 
 artifacts:
   - path: bin
