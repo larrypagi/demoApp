@@ -68,7 +68,7 @@ deploy:
   provider: GitHub
   auth_token:
     secure: '9coqsQQ6ps/LuUqQl5w4310gsoRQjSipzG8SezG8kzL8EHcauZMujw3ui6VlJKLb' # your encrypted token from GitHub
-  artifact: 'My_App\dist\*.exe'            # upload all NuGet packages to release assets
+  artifact: app            # upload all NuGet packages to release assets
   draft: false
   prerelease: false
   
