@@ -58,6 +58,6 @@ artifacts:
   - path: '\*_*.zip'
     name: Bits
 
- - path: 'projects\demoapp\My_App'
+  - path: '\projects\demoapp\My_App'
     name: app
 
