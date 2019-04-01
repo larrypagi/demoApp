@@ -58,6 +58,5 @@ artifacts:
   - path: '\*_*.zip'
     name: Bits
 
-  - path: My_App
+  - path: 'My_App\dist\*.exe'
     name: app
-
