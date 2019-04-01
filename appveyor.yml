@@ -57,3 +57,6 @@ artifacts:
 
   - path: '\*_*.zip'
     name: Bits
+  
+  - path: bin
+    name: all
