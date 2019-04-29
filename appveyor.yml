@@ -33,7 +33,7 @@ test_script:
 
 after_test:
   - Rscript -e "remotes::install_github('chasemc/electricShine')"
-  - Rscript -e "electricShine::buildElectricApp(appName = 'My_App', packageName = 'My demo app', semanticVersion = '1.0.0', installTo = getwd(), MRANdate = as.character(Sys.Date() - 3), functionName = 'run_app', githubRepo = 'chasemc/demoApp',localPath  = NULL, only64 = TRUE)"
+  - Rscript -e "electricShine::buildElectricApp(appName = 'My_App', packageName = 'My_Demo', semanticVersion = '1.0.0', installTo = getwd(), MRANdate = as.character(Sys.Date() - 3), functionName = 'run_app', githubRepo = 'chasemc/demoApp',localPath  = NULL, only64 = TRUE)"
 
 on_failure:
   - 7z a failure.zip *.Rcheck\*
@@ -58,7 +58,7 @@ artifacts:
   - path: '\*_*.zip'
     name: Bits
 
-  - path: 'My_App\My demo app\*.exe'
+  - path: 'My_App\dist\*.exe'
     name: app
 
 
